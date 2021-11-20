@@ -21,8 +21,11 @@
                 <mxCell id="11" value="UdaConnect&amp;nbsp;&lt;br&gt;App" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="90" y="342" width="160" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+                <mxCell id="12" value="UdaConnect&lt;br&gt;Db" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
                     <mxGeometry x="688" y="339" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="UdaConnect&amp;nbsp;&lt;br&gt;ConnectionsAPI" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="506" y="521" width="160" height="70" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
