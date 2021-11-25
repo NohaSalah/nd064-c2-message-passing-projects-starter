@@ -2,7 +2,7 @@ syntax ="proto3";
 
 /*
 Import timestamp in proto file of protobuf for GRPC
-https://developers.google.com/protocol-buffers/docs/reference/go-generated#well-known-types
+developers.google.com/protocol-buffers/docs/reference/go-generated#well-known-types
 */
 import 'google/protobuf/timestamp.proto';
 
@@ -32,10 +32,12 @@ message ConnectionMesg {
 }
 
 message ConnectionMesgList {
-	repeated Connection connections = 1;
+	repeated ConnectionMesg connections = 1;
 }
 
-/*from http://localhost:30001/ --> GET /api/persons/{person_id}/connection */ 
+/*
+from localhost:30001
+ */ 
 message SearchMesg {
 	int32 person_id = 1;
 	google.protobuf.Timestamp start_date = 2;
