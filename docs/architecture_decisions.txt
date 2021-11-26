@@ -1,0 +1,12 @@
+
+UdaConnect web application architecture design decisions depend on: 
+
+1. Persons API
+2. Connections API
+3. Locations API
+4. Consumers
+
+
+1.Person API
+Person data and services from frontend interact with a REST API and Kafka messaging to produce new records with geolocation via gRPC connection API data.
+ 
