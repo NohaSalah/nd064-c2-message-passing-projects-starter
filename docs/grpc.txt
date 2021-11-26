@@ -1,0 +1,4 @@
+This is a GRPC documentation of my endpoint and how to make a sample request.
+1. Generatig python gRPC services
+2. App gRPC definitions
+3. Sample request 
