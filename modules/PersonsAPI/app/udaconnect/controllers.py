@@ -23,7 +23,25 @@ api = Namespace("UdaConnect", description="Person Data.")  # noqa
 
 
 # TODO: This needs better exception handling
+personModel = api.model('Person',{
+                                    'id' : fields.Integer,
+                                    'first_name' : fields.String,
+                                    'last_name' : fields.String,
+                                    'company_name' : fields.String
+                                 })
 
+locationModel = api.model('Location',{
+                                        'id' : fields.Integer,
+                                        'person_id' : fields.Integer,
+                                        'longitude' : fields.String,
+                                        'latitude' : fields.String,
+                                        'creation_time' : fields.DateTime
+                                     })
+
+connectionModel = api.model('Connection',{
+                                            'location' : fields.Nested(locationModel),
+                                            'person' : fields.Nested(personModel)
+                                         })
 
 @api.route("/locations")
 @api.route("/locations/<location_id>")
