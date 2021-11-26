@@ -6,7 +6,7 @@ from google.protobuf.timestamp_pb2 import Timestamp
 from builtins import staticmethod
 
 from app.udaconnect.proto.connection_pb2 import SearchMesg
-from app.udaconnect.proto.connection_pb2_grpc import ConnectionDataServiceStub
+from app.udaconnect.proto.connection_pb2_grpc import ConnectionServiceStub
 
 
 
@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger("udaconnect-person-svc")
 
 data_channel = grcp.insecure_channel("udaconnect-connection-api:5005")
-serviceStub = ConnectionDataServiceStub(data_channel)
+serviceStub = ConnectionServiceStub(data_channel)
 
 
 class ConnectionService:
