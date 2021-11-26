@@ -1,4 +1,22 @@
 This is a GRPC documentation of my endpoint and how to make a sample request.
-1. Generatig python gRPC services
-2. App gRPC definitions
+1. Generatig python gRPC two libraies services
+2. App Udaconnect Protobuf definitions
 3. Sample request 
+
+1. Generatig python gRPC two libraies services
+From proto folder, execute the following command:
+python -m grpc_tools.protoc -I ./ --python_out=./ --grpc_python_out=./ connection.proto
+
+after that 2 files Stub and Servicer will be created inside proto folder beside 
+connection.proto file and they will be used by importing in models folder.
+
+2. App Udaconnect Protobuf definitions
+File name  connection.proto in the following path: 
+modules/PersonsAPI/app/udaconnect/proto
+
+The file connection.proto defines messages, obejects and service
+    2.1 Objects
+    
+    2.2 Messages
+    2.3 Service
+
