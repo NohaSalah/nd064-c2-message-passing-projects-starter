@@ -17,6 +17,7 @@ Kafka messaging to produce new records with geolocation via gRPC connection API 
 
 
 3. Locations API
-
+Similar to Person API, frontend facing module that is responsible for handling Location
+data and services through REST and Location entities through Kafka messaging.
 
  
