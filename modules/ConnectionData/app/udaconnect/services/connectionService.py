@@ -1,17 +1,19 @@
-import logging
-import grpc
-
 from datetime import datetime, timedelta
 from google.protobuf.timestamp_pb2 import Timestamp
 from builtins import staticmethod
+from google.protobuf.timestamp_pb2 import Timestamp
+from sqlalchemy.sql import text
 
-from app.udaconnect.proto.connection_pb2 import SearchMesg
-from app.udaconnect.proto.connection_pb2_grpc import ConnectionServiceStub
+from app.udaconnect.infra.database import DBSession, engine
+from app.udaconnect.services.locationServices import LocationService
+from app.udaconnect.services.personService import PersonService
+
+from app.udaconnect.proto.connection_data_pb2 import Person as PersonPB2, \
+    Location as LocationPB2, ConnectionMessage, ConnectionMessageList
 
 
 
-logging.basicConfig(level=logging.WARNING)
-logger = logging.getLogger("udaconnect-person-svc")
+session = DBSession()
 
 data_channel = grcp.insecure_channel("udaconnect-connection-api:5005")
 serviceStub = ConnectionServiceStub(data_channel)
