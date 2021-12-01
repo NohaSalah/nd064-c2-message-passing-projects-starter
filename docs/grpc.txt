@@ -1,7 +1,7 @@
 This is a GRPC documentation of my endpoint and how to make a sample request.
 1. Generatig python gRPC two libraies services
 2. App Udaconnect Protobuf definitions
-3. Sample request 
+3. Service sample request 
 
 
 1. Generatig python gRPC two libraies services
@@ -29,4 +29,5 @@ The file connection.proto defines messages, obejects and service
         and responding with the correct ConnectionMesgList.
 
 
-3. Sample request 
+3. Service sample request
+
