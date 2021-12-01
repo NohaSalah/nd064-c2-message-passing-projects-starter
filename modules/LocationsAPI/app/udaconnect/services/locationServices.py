@@ -34,5 +34,5 @@ class LocationService:
         if validation_results:
             logger.warning(f"Unexpected data format in payload: {validation_results}")
             raise Exception(f"Invalid payload: {validation_results}")
-
+        # from LocationProducer in services
         LocationProducer.sendMsg(location)
