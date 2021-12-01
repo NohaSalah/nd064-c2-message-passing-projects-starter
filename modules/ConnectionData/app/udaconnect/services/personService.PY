@@ -9,6 +9,7 @@ session = DBSession()
 
 class PersonService:
     @staticmethod
+    @lru_cache(maxsize=10)
     def retrieve(person_id: int) -> Person:
         person = session.query(Person).get(person_id)
         return person
