@@ -1,0 +1,8 @@
+ConnectionData in general still missing:
+1. servicer folder
+2. connectionService.py  ---> services inside ConnectionData
+3. main.py, tester.py ---> inside ConnectionData
+
+
+docs folder missing:
+architecture_decisions.txt, grpc.txt --->to complete
